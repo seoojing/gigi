@@ -154,7 +154,7 @@ a5 {
 		}	
 /* 힌트영역 */
 
- #hin1{bottom:81%; right: 14%; position: absolute;display: none; } 
+ #hin1{bottom:81%; left: 10%; position: absolute;display: none; } 
   #hin1 img{width: auto; height: 40px;animation:hintt 3s alternate; opacity: 0;z-index: 99;}
 
  #hin2{  bottom: 20%; right: 92%; position: absolute;display: none;} 
@@ -500,6 +500,9 @@ h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
 	<div id="ooo">
 		<img src="okk.png">
 	</div>
+	<div id="hin1">
+		<img src="yogi.png">
+	</div>	
 	<div id="hin2">
 		<img src="yogi.png">
 	</div>
@@ -512,6 +515,9 @@ h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
 	<!-- 크기 조절 -->
     </a5>
 </div>
+	<audio id="beep">
+		<source src="beep.mp3" type="audio/mpeg">
+	</audio>
 
 
 
@@ -526,8 +532,11 @@ window.onmousemove = function(){
 
 
 
+	soun11.onclick = function(){
+		beep.play();}	
 function lookDiv2 (){ 
   document.getElementById("hin2").style.display="none"; 
+  document.getElementById("hin1").style.display="none"; 
 } 
 function lookDiv3 (){ 
   document.getElementById("hin3").style.display="none"; 
@@ -992,6 +1001,7 @@ var on = true;
 
 	yaa2.onclick = function(){
 		but.play();
+			hin1.style.display = "inline"
 
 			hin3.style.display = "inline"
 			hin2.style.display = "inline"
